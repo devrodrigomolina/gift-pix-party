@@ -1,4 +1,10 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -22,34 +28,73 @@ export const GiftModal = ({ isOpen, onClose, giftTitle }: GiftModalProps) => {
       return;
     }
 
-    const whatsappMessage = `Olá! Eu sou *${name}* e acabei de fazer um presente: *${giftTitle}*!\n\n${message ? `Mensagem: ${message}` : ''}`;
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(whatsappMessage)}`;
-    
-    window.open(whatsappUrl, '_blank');
+    const whatsappMessage = `Olá! Eu sou *${name}* e acabei de fazer um presente: *${giftTitle}*!\n\n${
+      message ? `Mensagem: ${message}` : ""
+    }`;
+    const whatsappUrl = `https://wa.me/5544998070146?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
     toast.success("Obrigado pelo presente! ❤️");
-    
+
     setName("");
     setMessage("");
     onClose();
+  };
+
+  const pixCopiaECola = `00020126800014BR.GOV.BCB.PIX0111427908038030243Obrigado por colaborar com nossa nova
+  vida!5204000053039865802BR5925GABRIEL NATHAN SUEITT
+  QUE6007GUARUJA62070503***63049075`;
+
+  const handleCopyPix = async () => {
+    try {
+      await navigator.clipboard.writeText(pixCopiaECola);
+      toast.success("Código Pix copiado com sucesso! ✅");
+    } catch {
+      toast.error("Não foi possível copiar o código Pix 😢");
+    }
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-primary">Fazer PIX para {giftTitle}</DialogTitle>
+          <DialogTitle className="text-primary">
+            Fazer PIX para {giftTitle}
+          </DialogTitle>
           <DialogDescription className="text-muted-foreground">
             Escaneie o QR Code abaixo para fazer o PIX e depois nos avise!
           </DialogDescription>
         </DialogHeader>
-        
+
         <div className="flex flex-col items-center gap-6 py-4">
-          <div className="rounded-lg overflow-hidden shadow-card border border-border">
-            <img 
-              src={qrcodeImage} 
-              alt="QR Code PIX" 
+          <div className="rounded-lg overflow-hidden shadow-card border border-border p-4 flex flex-col items-center">
+            <img
+              src={qrcodeImage}
+              alt="QR Code PIX"
               className="w-64 h-64 object-cover"
             />
+
+            <div className="w-full mt-4 space-y-2">
+              <Button
+                onClick={handleCopyPix}
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+              >
+                Copiar código Pix (copia e cola)
+              </Button>
+
+              <Button
+                onClick={() => {
+                  navigator.clipboard.writeText("42790803803");
+                  toast.success("Chave Pix copiada! 📋");
+                }}
+                variant="outline"
+                className="w-full"
+              >
+                Copiar chave Pix
+              </Button>
+            </div>
           </div>
 
           <div className="w-full space-y-4">
@@ -75,7 +120,7 @@ export const GiftModal = ({ isOpen, onClose, giftTitle }: GiftModalProps) => {
               />
             </div>
 
-            <Button 
+            <Button
               onClick={handleSendToWhatsApp}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >

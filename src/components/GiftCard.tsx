@@ -13,8 +13,8 @@ export const GiftCard = ({ title, description, image, onGift }: GiftCardProps) =
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-elegant hover:-translate-y-1 bg-gradient-card border-border/50">
       <div className="aspect-square overflow-hidden bg-muted">
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
         />
@@ -24,7 +24,7 @@ export const GiftCard = ({ title, description, image, onGift }: GiftCardProps) =
         <CardDescription className="text-muted-foreground">{description}</CardDescription>
       </CardHeader>
       <CardFooter>
-        <Button 
+        <Button
           onClick={onGift}
           className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
         >
