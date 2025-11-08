@@ -31,7 +31,7 @@ export const GiftModal = ({ isOpen, onClose, giftTitle }: GiftModalProps) => {
     const whatsappMessage = `Olá! Eu sou *${name}* e acabei de fazer um presente: *${giftTitle}*!\n\n${
       message ? `Mensagem: ${message}` : ""
     }`;
-    const whatsappUrl = `https://wa.me/5544998070146?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/5511945309222?text=${encodeURIComponent(
       whatsappMessage
     )}`;
 
