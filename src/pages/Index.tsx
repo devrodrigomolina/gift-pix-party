@@ -36,113 +36,118 @@ const Index = () => {
   };
 
   const gifts = [
-  {
-    title: "Rolo de Macarrão Para Noiva",
-    description: "Ferramenta multiuso: culinária e controle emocional.",
-    image: roloMacarrao,
-  },
-  {
-    title: "Capacete Contra Rolo de Macarrão Para o Noivo",
-    description: "Equipamento de segurança para o noivo prevenido",
-    image: capaceteRoloMacarrao,
-  },
-  {
-    title: "PC Gamer da Paz Conjugal",
-    description: "Equipado com botão de emergência: pausa automática quando ela chama.",
-    image: pcGamer,
-  },
-  {
-    title: "Curso Intensivo de Sim, Senhora!",
-    description: "100% de aprovação entre as noivas",
-    image: simSenhora,
-  },
-  {
-    title: "Alvará Para Jogar Videogame",
-    description: "Documento raro e de grande valor sentimental.",
-    image: videoGame,
-  },
-  {
-    title: "Extintor de DR",
-    description: "Apague incêndios conjugais com uma boa dose de humor.",
-    image: extintor,
-  },
-  {
-    title: "Pote da Paciência",
-    description: "Dura pouco, mas é muito útil",
-    image: paciencia,
-  },
-  {
-    title: "Curso de Interpretação de Indiretas",
-    description: "Entendendo o que o “nada” significa.",
-    image: nada,
-  },
-  {
-    title: "Óculos da Compreensão",
-    description: "Veja o ponto de vista do parceiro claramente",
-    image: oculos,
-  },
-  {
-    title: "Plano Emergencial Anti-TPM",
-    description: "Chocolates, elogios, e silêncio estratégico",
-    image: antiTpm,
-  },
-  {
-    title: "Cobertor Para o Noivo",
-    description: "Pois a noiva está sempre coberta de razão",
-    image: cobertor,
-  },
-  {
-    title: "Seguro Contra Respostas Erradas",
-    description: "Cobertura completa para “tô gorda?” e “lembrou da data?”",
-    image: seguro,
-  },
-  {
-    title: "Assinatura Vitalícia de “Desculpa, Amor”",
-    description: "Sem cancelamento”",
-    image: desculpa,
-  },
-  {
-    title: "Só Pra Não Dizer Que Eu Não Dei Nada",
-    description: "Para não passar em branco",
-    image: quantoCusta,
-  },
-  {
-    title: "Uiii, Ele Quer Ser o Melhor",
-    description: "Para aquele amigo que gosta de ser TOP 1 em tudo",
-    image: top1,
-  },
-  {
-    title: "Fundo Pizza de Sexta",
-    description: "Porque todo casal precisa de uma pizza sagrada no fim de semana!",
-    image: pizzaFund,
-  },
-  {
-    title: "Kit Sobrevivência Conjugal",
-    description: "Pacote completo para sobreviver aos primeiros anos juntos com humor!",
-    image: survivalKit,
-  },
-  {
-    title: "Netflix & Discussão Zero",
-    description: "Garantir que nunca falte série pra assistir juntos (e debater depois)!",
-    image: netflixFund,
-  },
-  {
-    title: "Tratado de Paz do Controle Remoto",
-    description: "Para evitar guerras desnecessárias pela escolha do canal!",
-    image: remotePeace,
-  },
-  {
-    title: "Lua de Mel Atrasada",
-    description: "Aquela viagem dos sonhos que ficou pra depois... agora pode acontecer!",
-    image: honeymoon,
-  },
-  {
-    title: "Terapia de Casal (Preventiva)",
-    description: "Porque prevenir é melhor que remediar... e rir é o melhor remédio!",
-    image: therapy,
-  },
-];
-
+    {
+      title: "Rolo de Macarrão Para Noiva",
+      description: "Ferramenta multiuso: culinária e controle emocional.",
+      image: roloMacarrao,
+    },
+    {
+      title: "Capacete Contra Rolo de Macarrão Para o Noivo",
+      description: "Equipamento de segurança para o noivo prevenido",
+      image: capaceteRoloMacarrao,
+    },
+    {
+      title: "PC Gamer da Paz Conjugal",
+      description:
+        "Equipado com botão de emergência: pausa automática quando ela chama.",
+      image: pcGamer,
+    },
+    {
+      title: "Curso Intensivo de Sim, Senhora!",
+      description: "100% de aprovação entre as noivas",
+      image: simSenhora,
+    },
+    {
+      title: "Alvará Para Jogar Videogame",
+      description: "Documento raro e de grande valor sentimental.",
+      image: videoGame,
+    },
+    {
+      title: "Extintor de DR",
+      description: "Apague incêndios conjugais com uma boa dose de humor.",
+      image: extintor,
+    },
+    {
+      title: "Pote da Paciência",
+      description: "Dura pouco, mas é muito útil",
+      image: paciencia,
+    },
+    {
+      title: "Curso de Interpretação de Indiretas",
+      description: "Entendendo o que o “nada” significa.",
+      image: nada,
+    },
+    {
+      title: "Óculos da Compreensão",
+      description: "Veja o ponto de vista do parceiro claramente",
+      image: oculos,
+    },
+    {
+      title: "Plano Emergencial Anti-TPM",
+      description: "Chocolates, elogios, e silêncio estratégico",
+      image: antiTpm,
+    },
+    {
+      title: "Cobertor Para o Noivo",
+      description: "Pois a noiva está sempre coberta de razão",
+      image: cobertor,
+    },
+    {
+      title: "Seguro Contra Respostas Erradas",
+      description: "Cobertura completa para “tô gorda?” e “lembrou da data?”",
+      image: seguro,
+    },
+    {
+      title: "Assinatura Vitalícia de “Desculpa, Amor”",
+      description: "Sem cancelamento”",
+      image: desculpa,
+    },
+    {
+      title: "Só Pra Não Dizer Que Eu Não Dei Nada",
+      description: "Para não passar em branco",
+      image: quantoCusta,
+    },
+    {
+      title: "Uiii, Ele Quer Ser o Melhor",
+      description: "Para aquele amigo que gosta de ser TOP 1 em tudo",
+      image: top1,
+    },
+    {
+      title: "Fundo Pizza de Sexta",
+      description:
+        "Porque todo casal precisa de uma pizza sagrada no fim de semana!",
+      image: pizzaFund,
+    },
+    {
+      title: "Kit Sobrevivência Conjugal",
+      description:
+        "Pacote completo para sobreviver aos primeiros anos juntos com humor!",
+      image: survivalKit,
+    },
+    {
+      title: "Netflix & Discussão Zero",
+      description:
+        "Garantir que nunca falte série pra assistir juntos (e debater depois)!",
+      image: netflixFund,
+    },
+    {
+      title: "Tratado de Paz do Controle Remoto",
+      description: "Para evitar guerras desnecessárias pela escolha do canal!",
+      image: remotePeace,
+    },
+    {
+      title: "Lua de Mel Atrasada",
+      description:
+        "Aquela viagem dos sonhos que ficou pra depois... agora pode acontecer!",
+      image: honeymoon,
+    },
+    {
+      title: "Terapia de Casal (Preventiva)",
+      description:
+        "Porque prevenir é melhor que remediar... e rir é o melhor remédio!",
+      image: therapy,
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -151,8 +156,8 @@ const Index = () => {
         className="relative py-20 px-4 overflow-hidden"
         style={{
           backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
@@ -173,7 +178,9 @@ const Index = () => {
             <div className="w-full md:w-1/2 text-center md:text-left">
               <div className="inline-flex items-center gap-2 mb-4 bg-accent/20 px-4 py-2 rounded-full">
                 <Heart className="w-5 h-5 text-accent fill-accent animate-pulse" />
-                <span className="text-primary-foreground font-medium">Lista de Presentes</span>
+                <span className="text-primary-foreground font-medium">
+                  Lista de Presentes
+                </span>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 leading-tight">
@@ -200,8 +207,9 @@ const Index = () => {
               Escolha um Presente Especial
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Cada presente é uma forma divertida de ajudar o casal a começar essa nova fase.
-              Escolha o seu favorito e faça parte dessa história!
+              Cada presente é uma forma divertida de ajudar o casal a começar
+              essa nova fase. Escolha o seu favorito, faça parte dessa história,
+              e participe de um sorteio surpresa no dia do casamento!
             </p>
           </div>
 
@@ -223,7 +231,8 @@ const Index = () => {
       <footer className="py-8 px-4 border-t border-border">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            Feito com <Heart className="w-4 h-4 text-accent fill-accent" /> para Gabriel & Denise
+            Feito com <Heart className="w-4 h-4 text-accent fill-accent" /> para
+            Gabriel & Denise
           </p>
         </div>
       </footer>

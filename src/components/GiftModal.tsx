@@ -63,9 +63,6 @@ export const GiftModal = ({ isOpen, onClose, giftTitle }: GiftModalProps) => {
           <DialogTitle className="text-primary">
             Fazer PIX para {giftTitle}
           </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
-            Escaneie o QR Code abaixo para fazer o PIX e depois nos avise!
-          </DialogDescription>
         </DialogHeader>
 
         <div className="flex flex-col items-center gap-6 py-4">
