@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GiftCard } from "@/components/GiftCard";
 import { GiftModal } from "@/components/GiftModal";
 import { Heart } from "lucide-react";
-import coupleImage from "@/assets/couple-illustration.jpeg";
+import coupleImage from "@/assets/gabsdenise.jpeg";
 import heroBackground from "@/assets/hero-background.jpg";
 import pizzaFund from "@/assets/pizza-fund.jpg";
 import survivalKit from "@/assets/survival-kit.jpg";
