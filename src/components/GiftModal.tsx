@@ -16,9 +16,15 @@ interface GiftModalProps {
   isOpen: boolean;
   onClose: () => void;
   giftTitle: string;
+  noivo: boolean;
 }
 
-export const GiftModal = ({ isOpen, onClose, giftTitle }: GiftModalProps) => {
+export const GiftModal = ({
+  isOpen,
+  onClose,
+  giftTitle,
+  noivo,
+}: GiftModalProps) => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
@@ -31,9 +37,10 @@ export const GiftModal = ({ isOpen, onClose, giftTitle }: GiftModalProps) => {
     const whatsappMessage = `Olá! Eu sou *${name}* e acabei de enviar um presente: *${giftTitle}* para apoiar vocês nessa nova jornada ❤️‍🔥!\n\n${
       message ? `Mensagem: ${message}` : ""
     }`;
-    const whatsappUrl = `https://wa.me/5511945309222?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+
+    const whatsappUrl = `https://wa.me/${
+      noivo ? "5511945309222" : "5511988421931"
+    }?text=${encodeURIComponent(whatsappMessage)}`;
 
     window.open(whatsappUrl, "_blank");
     toast.success("Obrigado pelo presente! ❤️");
@@ -61,7 +68,7 @@ export const GiftModal = ({ isOpen, onClose, giftTitle }: GiftModalProps) => {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-primary">
-            Fazer PIX para {giftTitle}
+            Leia o QRCode, escolha um valor, e presenteie o casal.
           </DialogTitle>
         </DialogHeader>
 

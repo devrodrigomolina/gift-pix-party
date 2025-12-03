@@ -29,10 +29,12 @@ import pcGamer from "@/assets/pc.webp";
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedGift, setSelectedGift] = useState("");
+  const [isNoivo, setIsNoivo] = useState(false);
 
-  const handleGiftClick = (giftTitle: string) => {
+  const handleGiftClick = (giftTitle: string, noivo: boolean) => {
     setSelectedGift(giftTitle);
     setIsModalOpen(true);
+    setIsNoivo(noivo)
   };
 
   const gifts = [
@@ -45,22 +47,26 @@ const Index = () => {
       title: "Capacete Contra Rolo de Macarrão Para o Noivo",
       description: "Equipamento de segurança para o noivo prevenido",
       image: capaceteRoloMacarrao,
+      noivo: true,
     },
     {
       title: "PC Gamer da Paz Conjugal",
       description:
         "Equipado com botão de emergência: pausa automática quando ela chama.",
       image: pcGamer,
+      noivo: true,
     },
     {
       title: "Curso Intensivo de Sim, Senhora!",
       description: "100% de aprovação entre as noivas",
       image: simSenhora,
+      noivo: true,
     },
     {
       title: "Alvará Para Jogar Videogame",
       description: "Documento raro e de grande valor sentimental.",
       image: videoGame,
+      noivo: true,
     },
     {
       title: "Extintor de DR",
@@ -76,6 +82,7 @@ const Index = () => {
       title: "Curso de Interpretação de Indiretas",
       description: "Entendendo o que o “nada” significa.",
       image: nada,
+      noivo: true,
     },
     {
       title: "Óculos da Compreensão",
@@ -86,26 +93,31 @@ const Index = () => {
       title: "Plano Emergencial Anti-TPM",
       description: "Chocolates, elogios, e silêncio estratégico",
       image: antiTpm,
+      noivo: true,
     },
     {
       title: "Cobertor Para o Noivo",
       description: "Pois a noiva está sempre coberta de razão",
       image: cobertor,
+      noivo: true,
     },
     {
       title: "Seguro Contra Respostas Erradas",
       description: "Cobertura completa para “tô gorda?” e “lembrou da data?”",
       image: seguro,
+      noivo: true,
     },
     {
       title: "Assinatura Vitalícia de “Desculpa, Amor”",
       description: "Sem cancelamento”",
       image: desculpa,
+      noivo: true,
     },
     {
       title: "Só Pra Não Dizer Que Eu Não Dei Nada",
       description: "Para não passar em branco",
       image: quantoCusta,
+      noivo: true,
     },
     {
       title: "Uiii, Ele Quer Ser o Melhor",
@@ -117,6 +129,7 @@ const Index = () => {
       description:
         "Porque todo casal precisa de uma pizza sagrada no fim de semana!",
       image: pizzaFund,
+      noivo: true,
     },
     {
       title: "Kit Sobrevivência Conjugal",
@@ -220,7 +233,7 @@ const Index = () => {
                 title={gift.title}
                 description={gift.description}
                 image={gift.image}
-                onGift={() => handleGiftClick(gift.title)}
+                onGift={() => handleGiftClick(gift.title, !!gift.noivo)}
               />
             ))}
           </div>
@@ -241,6 +254,7 @@ const Index = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         giftTitle={selectedGift}
+        noivo={isNoivo}
       />
     </div>
   );
